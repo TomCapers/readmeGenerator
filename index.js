@@ -16,14 +16,27 @@ const questions = [
     type: 'input',
     message: 'Instalation Instructions:',
     name: 'instillation',
+},
+
+{
+    type: 'input',
+    message: 'Usage Information:',
+    name: 'usage',
+},
+
+{
+    type: 'input',
+    message: 'Contibution Guidelines:',
+    name: 'contibution',
+},
+
+{
+    type: 'input',
+    message: 'Test Instructions:',
+    name: 'test',
 }
+
 ];
-
-
-
-
-
-
 
 
 
@@ -34,12 +47,6 @@ function writeToFile(fileName, data) {
     return fs.writeFile(fileName, data);
     
 }
-
-
-
-
-
-
 
 function init() {
     inquirer.prompt(questions).then(data =>{
